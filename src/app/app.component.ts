@@ -27,6 +27,7 @@ export class AppComponent {
   //Yapılacaklar'a todo ekler
   addTodo(){
     this.todoList.push(this.todoItem);
+    this.todoItem ="";
   }
   //Yapılacaklardaki todo'yu yapılacaklardan silerek tamamlananlara ekler
   addToCompletedTodo(index:number){
