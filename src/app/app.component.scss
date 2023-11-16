@@ -1,0 +1,132 @@
+//Sürekli kullanacağımız renkleri değişkenlere atayabiliriz.
+$first-color:#2564cf;
+$font-first-color:#292827;
+$white-color:#fff;
+$background-color:#faf9f8;
+$task-item-completed-color: #ecf6fd;
+$task-item-removed-color:#f8c7c7;
+$remove-color:#f30b0b;
+$add-color:#5ca52d;
+
+.app{
+    height: 100vh; /* app clasına sahip elementin uzunluğu ekranın uzunluğu olsun.*/
+}
+.todo{
+    padding: 2rem; 
+   .todo-header{
+    display:flex;
+    align-items: center;
+        .list-btn{
+            color: $first-color; 
+        }
+        span{
+            color: $first-color;
+            font-size: 1.5em;/*Geçerli elementin(span) font-size'nın 1.5 katı*/
+            font-weight: 600;
+        }
+        .header-input{
+            border: none; 
+            outline: none;
+            color: $first-color;
+            font-size: 1.5em;/*Geçerli elementin(input) font-size'nın 1.5 katı*/
+            background-color: $background-color;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+   }
+}
+.list-card-item{
+    height: 48px;
+    min-height: 30px;
+    width: 100%;
+    background-color: $white-color;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 2px $first-color;
+}
+
+.add-box{
+    display: flex;
+    .add-input{
+        border: none; 
+        outline: none;
+        width: 100%;
+    }
+    .add-btn{
+        color: $add-color;
+    }
+}
+
+.list-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    .add-todo{
+        display: flex;
+        align-items: center;
+        .add-input{
+            border: none; 
+            outline: none;
+            width: calc(100% - 60px);
+        }
+    }
+    .completed-btn{
+        color: $first-color;
+    }
+    .edit-btn{
+        color:$add-color;
+    }
+    .remove-btn{
+        color: $remove-color;
+    }
+    .undo-btn{
+        color: $first-color;
+    }
+}
+
+.todo-removed{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display:flex;
+    align-items: center;
+    padding-left: 2rem;
+        span{
+            color: $first-color;
+            font-size: 1.5em;/*Geçerli elementin(span) font-size'nın 1.5 katı*/
+            font-weight: 600;
+        }
+        .edit-btn{
+            font-size: 0.75em;
+            color: $first-color;
+        }
+        
+}
+
+.todo-completed{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display:flex;
+    align-items: center;
+    padding-left: 2rem;
+        span{
+            color: $first-color;
+            font-size: 1.5em;/*Geçerli elementin(span) font-size'nın 1.5 katı*/
+            font-weight: 600;
+        }
+        .edit-btn{
+            font-size: 0.75em;
+            color: $first-color;
+        }
+    
+}
+.todo-completed ~ .list-card-item{
+    background-color: $task-item-completed-color;
+}
+.todo-removed ~ .list-card-item{
+    background-color:$task-item-removed-color;
+}
