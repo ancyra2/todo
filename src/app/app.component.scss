@@ -9,10 +9,13 @@ $remove-color:#f30b0b;
 $add-color:#5ca52d;
 
 .app{
-    height: 100vh; /* app clasına sahip elementin uzunluğu ekranın uzunluğu olsun.*/
+    height: 100vh;
+    display: flex; /* app clasına sahip elementin uzunluğu ekranın uzunluğu olsun.*/
 }
+
 .todo{
-    padding: 2rem; 
+    inline-size: 100%;
+    padding: 2rem;
    .todo-header{
     display:flex;
     align-items: center;

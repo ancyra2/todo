@@ -1,8 +1,8 @@
 <div class="app">
   <!-- Main elementi burada div gibi düşünülebilir.-->
   <!-- Sadece burada sayfanın ana bölümü olduğunu belirtiyor.-->
+  <app-sidebar></app-sidebar>
   <main class="todo">
-    <header>
       <div class="todo-header">
         <button mat-icon-button class="list-btn" (click)="editHeader()">
           <mat-icon>list</mat-icon>
@@ -12,7 +12,6 @@
           <input matInput class="header-input" [(ngModel)] = "todoHeader" placeholder="Başlığı Düzenle">
         </ng-template>
       </div>
-    </header>
     <!--Görev Ekle Starts-->
     <div class="todo-add">
       <div class="list-card-item">
@@ -95,4 +94,3 @@
     <!--Kaldıralan Görevler Ends-->
   </main>
 </div>
-<router-outlet></router-outlet>
